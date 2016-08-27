@@ -10,8 +10,7 @@ import Foundation
 import XcodeKit
 
 class SourceEditorCommand: NSObject, XCSourceEditorCommand {
-    
-    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (NSError?) -> Void ) -> Void {
+    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void) {
         guard let selection = invocation.buffer.selections.firstObject as? XCSourceTextRange else {
             let error = NSError(domain: "GenerateSwiftInit", code: 0, userInfo: [NSLocalizedDescriptionKey: "invalid selection for generation"])
             completionHandler(error)
@@ -30,12 +29,13 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
             return lineNumbers.contains(lineNumber) ? line : nil
         }
 
-        invocation.buffer.lines.insert(generateInit(lines: lines), at: lineNumbers.upperBound.advanced(by: 1))
+        let initializer = generateInit(lines: lines)
+        invocation.buffer.lines.insert(initializer, at: lineNumbers.upperBound.advanced(by: 1))
 
         completionHandler(nil)
     }
 
-    private let regex = try! RegularExpression(pattern: "(?:var|let)\\s(\\w+)\\s?:\\s?(\\w+\\??)", options: [.caseInsensitive])
+    private let regex = try! NSRegularExpression(pattern: "(?:var|let)\\s(\\w+)\\s?:\\s?(\\w+\\??)", options: [.caseInsensitive])
 
     private struct Match {
         let name: String
@@ -56,14 +56,19 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
             let range = NSRange(location: 0, length: line.utf8.count)
             let matches = regex.matches(in: line, options: [], range: range)
 
-            guard let match = matches.first else { return nil }
+            guard let match = matches.first,
+                match.numberOfRanges >= 2
+                else { return nil }
 
+            // TODO: should be able to solve this with pure Swift...
             let nsline = line as NSString
+            let nameRange = match.rangeAt(1)
+            let typeRange = match.rangeAt(2)
 
-            let nameRange = match.range(at: 1)
-            let typeRange = match.range(at: 2)
-
-            return Match(name: nsline.substring(with: nameRange), type: nsline.substring(with: typeRange))
+            return Match(
+                name: nsline.substring(with: nameRange),
+                type: nsline.substring(with: typeRange)
+            )
         }
 
         // optional? throws?
@@ -75,7 +80,7 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
         let valueInitializers = results.map { $0.valueInitializer }.joined(separator: "\n\t")
 
         // TODO: correct indent
-        return "\ninit(\(paramString)) {\n\t\(valueInitializers)\n}"
+        return "\ninit(\(paramString)) {\n\t\(valueInitializers)\n}\n"
     }
 }
 
