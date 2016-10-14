@@ -8,18 +8,19 @@
 
 import Cocoa
 
+import SwiftGenerator
+
 class ViewController: NSViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var inputTextView: NSTextView!
+    @IBOutlet weak var outputTextView: NSTextView!
 
-        // Do any additional setup after loading the view.
-    }
+    @IBAction func generate(_ sender: AnyObject) {
+        guard let lines = inputTextView.string else { return }
 
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
+        let initializer = generateInit(lines: lines.components(separatedBy: "\n"))
+
+        outputTextView.string = initializer
     }
 }
 

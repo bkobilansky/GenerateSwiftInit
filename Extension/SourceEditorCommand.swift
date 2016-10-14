@@ -7,7 +7,10 @@
 //
 
 import Foundation
+
 import XcodeKit
+
+import SwiftGenerator
 
 class SourceEditorCommand: NSObject, XCSourceEditorCommand {
     func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void) {
@@ -29,58 +32,10 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
             return lineNumbers.contains(lineNumber) ? line : nil
         }
 
-        let initializer = generateInit(lines: lines)
+        let initializer = SwiftGenerator.generateInit(lines: lines)
         invocation.buffer.lines.insert(initializer, at: lineNumbers.upperBound.advanced(by: 1))
 
         completionHandler(nil)
-    }
-
-    private let regex = try! NSRegularExpression(pattern: "(?:var|let)\\s(\\w+)\\s?:\\s?(\\w+\\??)", options: [.caseInsensitive])
-
-    private struct Match {
-        let name: String
-        let type: String
-
-        var paramString: String {
-            return "\(name): \(type)"
-        }
-
-        var valueInitializer: String {
-            return "self.\(name) = \(name)"
-        }
-    }
-
-    private func generateInit(lines: [String]) -> String {
-
-        let results = lines.flatMap { line -> Match? in
-            let range = NSRange(location: 0, length: line.utf8.count)
-            let matches = regex.matches(in: line, options: [], range: range)
-
-            guard let match = matches.first,
-                match.numberOfRanges >= 2
-                else { return nil }
-
-            // TODO: should be able to solve this with pure Swift...
-            let nsline = line as NSString
-            let nameRange = match.rangeAt(1)
-            let typeRange = match.rangeAt(2)
-
-            return Match(
-                name: nsline.substring(with: nameRange),
-                type: nsline.substring(with: typeRange)
-            )
-        }
-
-        // optional? throws?
-        guard results.count > 0 else { return "" }
-
-        let paramString = results.map { $0.paramString }.joined(separator: ", ")
-
-        // TODO: correct indent
-        let valueInitializers = results.map { $0.valueInitializer }.joined(separator: "\n\t")
-
-        // TODO: correct indent
-        return "\ninit(\(paramString)) {\n\t\(valueInitializers)\n}\n"
     }
 }
 

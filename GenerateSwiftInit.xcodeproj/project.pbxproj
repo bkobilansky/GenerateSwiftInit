@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CAE1D18F1DB0874700A44510 /* SwiftGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE1D1861DB0874700A44510 /* SwiftGenerator.framework */; };
+		CAE1D1961DB0874700A44510 /* SwiftGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1D1951DB0874700A44510 /* SwiftGeneratorTests.swift */; };
+		CAE1D1981DB0874700A44510 /* SwiftGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = CAE1D1881DB0874700A44510 /* SwiftGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CAE1D19B1DB0874700A44510 /* SwiftGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE1D1861DB0874700A44510 /* SwiftGenerator.framework */; };
+		CAE1D19C1DB0874700A44510 /* SwiftGenerator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAE1D1861DB0874700A44510 /* SwiftGenerator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CAE1D1A51DB0877400A44510 /* GenerateInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1D1A41DB0877400A44510 /* GenerateInit.swift */; };
+		CAE1D1A61DB0884200A44510 /* SwiftGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE1D1861DB0874700A44510 /* SwiftGenerator.framework */; };
 		CAE75FFE1D0FAEF30044F506 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE75FFD1D0FAEF30044F506 /* AppDelegate.swift */; };
 		CAE760001D0FAEF30044F506 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE75FFF1D0FAEF30044F506 /* ViewController.swift */; };
 		CAE760021D0FAEF30044F506 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAE760011D0FAEF30044F506 /* Assets.xcassets */; };
@@ -18,6 +25,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		CAE1D1901DB0874700A44510 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAE75FF21D0FAEF30044F506 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAE1D1851DB0874700A44510;
+			remoteInfo = SwiftGenerator;
+		};
+		CAE1D1921DB0874700A44510 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAE75FF21D0FAEF30044F506 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAE75FF91D0FAEF30044F506;
+			remoteInfo = GenerateSwiftInit;
+		};
+		CAE1D1991DB0874700A44510 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAE75FF21D0FAEF30044F506 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAE1D1851DB0874700A44510;
+			remoteInfo = SwiftGenerator;
+		};
 		CAE7601C1D0FAEFF0044F506 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CAE75FF21D0FAEF30044F506 /* Project object */;
@@ -28,6 +56,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		CAE1D1A21DB0874700A44510 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CAE1D19C1DB0874700A44510 /* SwiftGenerator.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CAE760221D0FAEFF0044F506 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -42,6 +81,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CAE1D1861DB0874700A44510 /* SwiftGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAE1D1881DB0874700A44510 /* SwiftGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftGenerator.h; sourceTree = "<group>"; };
+		CAE1D1891DB0874700A44510 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAE1D18E1DB0874700A44510 /* SwiftGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAE1D1951DB0874700A44510 /* SwiftGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGeneratorTests.swift; sourceTree = "<group>"; };
+		CAE1D1971DB0874700A44510 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAE1D1A41DB0877400A44510 /* GenerateInit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerateInit.swift; sourceTree = "<group>"; };
 		CAE75FFA1D0FAEF30044F506 /* GenerateSwiftInit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GenerateSwiftInit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAE75FFD1D0FAEF30044F506 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAE75FFF1D0FAEF30044F506 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,10 +103,26 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CAE1D1821DB0874700A44510 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAE1D18B1DB0874700A44510 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAE1D18F1DB0874700A44510 /* SwiftGenerator.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CAE75FF71D0FAEF30044F506 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAE1D19B1DB0874700A44510 /* SwiftGenerator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAE1D1A61DB0884200A44510 /* SwiftGenerator.framework in Frameworks */,
 				CAE760131D0FAEFF0044F506 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,11 +138,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CAE1D1871DB0874700A44510 /* SwiftGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				CAE1D1881DB0874700A44510 /* SwiftGenerator.h */,
+				CAE1D1A41DB0877400A44510 /* GenerateInit.swift */,
+				CAE1D1891DB0874700A44510 /* Info.plist */,
+			);
+			path = SwiftGenerator;
+			sourceTree = "<group>";
+		};
+		CAE1D1941DB0874700A44510 /* SwiftGeneratorTests */ = {
+			isa = PBXGroup;
+			children = (
+				CAE1D1951DB0874700A44510 /* SwiftGeneratorTests.swift */,
+				CAE1D1971DB0874700A44510 /* Info.plist */,
+			);
+			path = SwiftGeneratorTests;
+			sourceTree = "<group>";
+		};
 		CAE75FF11D0FAEF30044F506 = {
 			isa = PBXGroup;
 			children = (
 				CAE75FFC1D0FAEF30044F506 /* GenerateSwiftInit */,
 				CAE760141D0FAEFF0044F506 /* Extension */,
+				CAE1D1871DB0874700A44510 /* SwiftGenerator */,
+				CAE1D1941DB0874700A44510 /* SwiftGeneratorTests */,
 				CAE760111D0FAEFF0044F506 /* Frameworks */,
 				CAE75FFB1D0FAEF30044F506 /* Products */,
 			);
@@ -90,6 +174,8 @@
 			children = (
 				CAE75FFA1D0FAEF30044F506 /* GenerateSwiftInit.app */,
 				CAE760101D0FAEFF0044F506 /* Extension.appex */,
+				CAE1D1861DB0874700A44510 /* SwiftGenerator.framework */,
+				CAE1D18E1DB0874700A44510 /* SwiftGeneratorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,7 +221,55 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		CAE1D1831DB0874700A44510 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAE1D1981DB0874700A44510 /* SwiftGenerator.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		CAE1D1851DB0874700A44510 /* SwiftGenerator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAE1D1A11DB0874700A44510 /* Build configuration list for PBXNativeTarget "SwiftGenerator" */;
+			buildPhases = (
+				CAE1D1811DB0874700A44510 /* Sources */,
+				CAE1D1821DB0874700A44510 /* Frameworks */,
+				CAE1D1831DB0874700A44510 /* Headers */,
+				CAE1D1841DB0874700A44510 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftGenerator;
+			productName = SwiftGenerator;
+			productReference = CAE1D1861DB0874700A44510 /* SwiftGenerator.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CAE1D18D1DB0874700A44510 /* SwiftGeneratorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAE1D1A31DB0874700A44510 /* Build configuration list for PBXNativeTarget "SwiftGeneratorTests" */;
+			buildPhases = (
+				CAE1D18A1DB0874700A44510 /* Sources */,
+				CAE1D18B1DB0874700A44510 /* Frameworks */,
+				CAE1D18C1DB0874700A44510 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CAE1D1911DB0874700A44510 /* PBXTargetDependency */,
+				CAE1D1931DB0874700A44510 /* PBXTargetDependency */,
+			);
+			name = SwiftGeneratorTests;
+			productName = SwiftGeneratorTests;
+			productReference = CAE1D18E1DB0874700A44510 /* SwiftGeneratorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		CAE75FF91D0FAEF30044F506 /* GenerateSwiftInit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CAE760091D0FAEF30044F506 /* Build configuration list for PBXNativeTarget "GenerateSwiftInit" */;
@@ -144,11 +278,13 @@
 				CAE75FF71D0FAEF30044F506 /* Frameworks */,
 				CAE75FF81D0FAEF30044F506 /* Resources */,
 				CAE760221D0FAEFF0044F506 /* Embed App Extensions */,
+				CAE1D1A21DB0874700A44510 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				CAE7601D1D0FAEFF0044F506 /* PBXTargetDependency */,
+				CAE1D19A1DB0874700A44510 /* PBXTargetDependency */,
 			);
 			name = GenerateSwiftInit;
 			productName = GenerateSwiftInit;
@@ -182,6 +318,17 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Brandon Kobilansky";
 				TargetAttributes = {
+					CAE1D1851DB0874700A44510 = {
+						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
+					CAE1D18D1DB0874700A44510 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = PH2X6D3B9M;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CAE75FF91D0FAEF30044F506;
+					};
 					CAE75FF91D0FAEF30044F506 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = PH2X6D3B9M;
@@ -211,11 +358,27 @@
 			targets = (
 				CAE75FF91D0FAEF30044F506 /* GenerateSwiftInit */,
 				CAE7600F1D0FAEFF0044F506 /* Extension */,
+				CAE1D1851DB0874700A44510 /* SwiftGenerator */,
+				CAE1D18D1DB0874700A44510 /* SwiftGeneratorTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CAE1D1841DB0874700A44510 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAE1D18C1DB0874700A44510 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CAE75FF81D0FAEF30044F506 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -235,6 +398,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CAE1D1811DB0874700A44510 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAE1D1A51DB0877400A44510 /* GenerateInit.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAE1D18A1DB0874700A44510 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAE1D1961DB0874700A44510 /* SwiftGeneratorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CAE75FF61D0FAEF30044F506 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -256,6 +435,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		CAE1D1911DB0874700A44510 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAE1D1851DB0874700A44510 /* SwiftGenerator */;
+			targetProxy = CAE1D1901DB0874700A44510 /* PBXContainerItemProxy */;
+		};
+		CAE1D1931DB0874700A44510 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAE75FF91D0FAEF30044F506 /* GenerateSwiftInit */;
+			targetProxy = CAE1D1921DB0874700A44510 /* PBXContainerItemProxy */;
+		};
+		CAE1D19A1DB0874700A44510 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAE1D1851DB0874700A44510 /* SwiftGenerator */;
+			targetProxy = CAE1D1991DB0874700A44510 /* PBXContainerItemProxy */;
+		};
 		CAE7601D1D0FAEFF0044F506 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CAE7600F1D0FAEFF0044F506 /* Extension */;
@@ -275,6 +469,99 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		CAE1D19D1DB0874700A44510 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = SwiftGenerator/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bk.SwiftGenerator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CAE1D19E1DB0874700A44510 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = SwiftGenerator/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bk.SwiftGenerator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CAE1D19F1DB0874700A44510 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = PH2X6D3B9M;
+				INFOPLIST_FILE = SwiftGeneratorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bk.SwiftGeneratorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GenerateSwiftInit.app/Contents/MacOS/GenerateSwiftInit";
+			};
+			name = Debug;
+		};
+		CAE1D1A01DB0874700A44510 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = PH2X6D3B9M;
+				INFOPLIST_FILE = SwiftGeneratorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bk.SwiftGeneratorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GenerateSwiftInit.app/Contents/MacOS/GenerateSwiftInit";
+			};
+			name = Release;
+		};
 		CAE760071D0FAEF30044F506 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -426,6 +713,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CAE1D1A11DB0874700A44510 /* Build configuration list for PBXNativeTarget "SwiftGenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAE1D19D1DB0874700A44510 /* Debug */,
+				CAE1D19E1DB0874700A44510 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CAE1D1A31DB0874700A44510 /* Build configuration list for PBXNativeTarget "SwiftGeneratorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAE1D19F1DB0874700A44510 /* Debug */,
+				CAE1D1A01DB0874700A44510 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		CAE75FF51D0FAEF30044F506 /* Build configuration list for PBXProject "GenerateSwiftInit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
