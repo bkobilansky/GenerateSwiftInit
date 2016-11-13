@@ -14,6 +14,11 @@ private struct Match {
     let name: String
     let type: String
 
+    init(name: String, type: String) {
+        self.name = name
+        self.type = type
+    }
+
     var paramString: String {
         return "\(name): \(type)"
     }
