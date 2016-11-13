@@ -12,8 +12,8 @@ import SwiftGenerator
 
 class ViewController: NSViewController {
 
-    @IBOutlet weak var inputTextView: NSTextView!
-    @IBOutlet weak var outputTextView: NSTextView!
+    @IBOutlet var inputTextView: NSTextView!
+    @IBOutlet var outputTextView: NSTextView!
 
     @IBAction func generate(_ sender: AnyObject) {
         guard let lines = inputTextView.string else { return }
