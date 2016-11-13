@@ -21,7 +21,7 @@
 		CAE760131D0FAEFF0044F506 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE760121D0FAEFF0044F506 /* Cocoa.framework */; };
 		CAE760181D0FAEFF0044F506 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE760171D0FAEFF0044F506 /* SourceEditorExtension.swift */; };
 		CAE7601A1D0FAEFF0044F506 /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE760191D0FAEFF0044F506 /* SourceEditorCommand.swift */; };
-		CAE7601E1D0FAEFF0044F506 /* Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CAE760101D0FAEFF0044F506 /* Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CAE7601E1D0FAEFF0044F506 /* Generate Swift Init.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CAE760101D0FAEFF0044F506 /* Generate Swift Init.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +73,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				CAE7601E1D0FAEFF0044F506 /* Extension.appex in Embed App Extensions */,
+				CAE7601E1D0FAEFF0044F506 /* Generate Swift Init.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,7 +94,7 @@
 		CAE760011D0FAEF30044F506 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAE760041D0FAEF30044F506 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CAE760061D0FAEF30044F506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CAE760101D0FAEFF0044F506 /* Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Extension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAE760101D0FAEFF0044F506 /* Generate Swift Init.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Generate Swift Init.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAE760121D0FAEFF0044F506 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		CAE760161D0FAEFF0044F506 /* Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Extension.entitlements; sourceTree = "<group>"; };
 		CAE760171D0FAEFF0044F506 /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
@@ -173,7 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				CAE75FFA1D0FAEF30044F506 /* GenerateSwiftInit.app */,
-				CAE760101D0FAEFF0044F506 /* Extension.appex */,
+				CAE760101D0FAEFF0044F506 /* Generate Swift Init.appex */,
 				CAE1D1861DB0874700A44510 /* SwiftGenerator.framework */,
 				CAE1D18E1DB0874700A44510 /* SwiftGeneratorTests.xctest */,
 			);
@@ -305,7 +305,7 @@
 			);
 			name = Extension;
 			productName = Extension;
-			productReference = CAE760101D0FAEFF0044F506 /* Extension.appex */;
+			productReference = CAE760101D0FAEFF0044F506 /* Generate Swift Init.appex */;
 			productType = "com.apple.product-type.xcode-extension";
 		};
 /* End PBXNativeTarget section */
@@ -688,7 +688,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bk.GenerateSwiftInit.Extension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Generate Swift Init";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -704,7 +704,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bk.GenerateSwiftInit.Extension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Generate Swift Init";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -720,6 +720,7 @@
 				CAE1D19E1DB0874700A44510 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CAE1D1A31DB0874700A44510 /* Build configuration list for PBXNativeTarget "SwiftGeneratorTests" */ = {
 			isa = XCConfigurationList;
@@ -728,6 +729,7 @@
 				CAE1D1A01DB0874700A44510 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CAE75FF51D0FAEF30044F506 /* Build configuration list for PBXProject "GenerateSwiftInit" */ = {
 			isa = XCConfigurationList;
